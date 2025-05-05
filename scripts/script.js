@@ -1,6 +1,7 @@
 const btnEl = document.getElementById('btn');
 const inputEl = document.getElementById('input');
 const textEl = document.getElementById('show-notification');
+const errorEl = document.querySelector('.error-icon');
 
 function checkEmail() {
   const check = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -12,6 +13,7 @@ function checkEmail() {
   } else{
     textEl.innerText = 'Please provide a valid email';
     textEl.classList.remove('active');
+    errorEl.classList.remove('active');
   }
 }
 
